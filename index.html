@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>happy 20th birthday hannah 🎀</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Comic Sans MS, cursive;
+  background:linear-gradient(#ffd6e7,#fff0f6);
+  text-align:center;
+  overflow:hidden;
+}
+
+h1{
+  color:#ff4f8b;
+  font-size:50px;
+  margin-top:40px;
+}
+
+.box{
+  background:white;
+  width:60%;
+  margin:auto;
+  padding:25px;
+  border-radius:25px;
+  border:4px dashed #ff9cc2;
+}
+
+button{
+  background:#ff7fb3;
+  border:none;
+  padding:15px 30px;
+  font-size:18px;
+  border-radius:20px;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ff4f8b;
+}
+
+.float{
+  position:absolute;
+  font-size:28px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  0%{transform:translateY(-10vh);}
+  100%{transform:translateY(110vh);}
+}
+
+#flash{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:white;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.3s;
+}
+
+#popup{
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  border:5px solid #ff9cc2;
+  font-size:18px;
+  color:#444;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  max-width:500px;
+  max-height:70vh;
+  overflow:auto;
+  text-align:left;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="flash"></div>
+
+<h1>happy birthday hannah 🎀</h1>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_kitty_character_portrait.png" width="200">
+
+<div class="box">
+  <p>to the cutest girl ever 💗</p>
+  <button onclick="surprise()">click me 💕</button>
+</div>
+
+<div id="popup">
+
+  <!-- Girlfriend's picture inside the letter -->
+  <img src="hannah.jpg" alt="Hannah" style="width:150px; border-radius:20px; display:block; margin:0 auto 20px auto; border:3px solid #ff9cc2;">
+
+  <p>
+  happy 20th birthday hannah 🎂🎀💗<br><br>
+
+  hi baby,<br><br>
+
+  happy happy birthday sa pinaka cute, pinaka lambing, at pinaka special na girl sa buhay ko. parang ang bilis ng time no? parang dati lang panay papansin ka sakin sa roblox tapos ngayon ikaw na yung reason kung bakit lagi akong naka smile kahit random lang yung araw.<br><br>
+
+  baby, i just want you to know na super thankful ako na nandito ka sa life ko. hindi ko alam paano ko na survive yung mga araw na wala ka before. ever since dumating ka, everything just feels softer… parang may pink filter yung mundo ko hahaha.<br><br>
+
+  i love the way you laugh, yung cute mong reactions sa mga random na bagay, at yung way mo na bigla nalang akong napapangiti kahit wala kang ginagawa. kahit simpleng “hi baby” mo lang minsan, enough na para ma complete yung araw ko.<br><br>
+
+  minsan makulit ako, minsan annoying, minsan slow ako mag reply, at minsan ang kulit ko sobra. pero kahit ganon, please know na my feelings for you are always real. mahal kita, sobra sobra.<br><br>
+
+  you deserve so many good things in life baby. you deserve happiness, peace, success, good food, cute things, at lahat ng bagay na mag papasaya sayo. i hope this year brings you more blessings, more smiles, at more moments na proud ka sa sarili mo.<br><br>
+
+  and sana kahit tumagal pa yung time, kahit magbago yung mundo, nandito parin tayo. ikaw parin yung kausap ko sa gabi, at ikaw parin yung dahilan kung bakit ang saya ng buhay.<br><br>
+
+  i love you so much my baby.<br><br>
+
+  happy 20th birthday hannah.<br>
+  i’m really lucky na ikaw yung asawa ko.<br><br>
+
+  always yours,<br>
+  your baby 💗
+  </p>
+
+</div>
+
+<script>
+
+function surprise(){
+  let flash=document.getElementById("flash");
+  flash.style.opacity="1";
+
+  setTimeout(()=>{
+    flash.style.opacity="0";
+    document.getElementById("popup").style.display="block";
+  },300);
+}
+
+function createHeart(){
+  let heart=document.createElement("div");
+  heart.className="float";
+  heart.innerHTML="💗";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(4+Math.random()*4)+"s";
+  document.body.appendChild(heart);
+
+  setTimeout(()=>heart.remove(),8000);
+}
+
+setInterval(createHeart,700);
+
+</script>
+
+</body>
+</html>
